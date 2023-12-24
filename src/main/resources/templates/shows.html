@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workbook 2.1</title>
+</head>
+<body>
+    <h2>IMDB: Top 5 Episodes</h2>
+
+    <div>
+        <table width="100%" border="solid" >
+            <tr>
+                <th>Title</th>
+                <th>Episode</th>
+                <th>Rating</th>
+            </tr>
+
+            <tr th:each="movie: ${moviesTransfer}">
+                <td th:text="${movie.title}"></td>
+                <td th:text="${movie.episode}"></td>
+                <td th:text="${movie.rating}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
